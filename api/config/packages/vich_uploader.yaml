@@ -1,0 +1,20 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        tutor_image:
+            uri_prefix: /images/tutors
+            upload_destination: '%kernel.project_dir%/public/images/tutors'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        policy_document:
+            uri_prefix: /documents/policies
+            upload_destination: '%kernel.project_dir%/public/documents/policies'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        testimonial_image:
+            uri_prefix: /images/testimonials
+            upload_destination: '%kernel.project_dir%/public/images/testimonials'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
+        class_image:
+            uri_prefix: /images/classes
+            upload_destination: '%kernel.project_dir%/public/images/classes'
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
