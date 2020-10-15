@@ -10,13 +10,12 @@ class HomeController extends AbstractFOSRestController
 {
     /**
      * @return Response
-     * @Rest\Route("/home")
+     * @Rest\Route("/")
      */
     public function getHomeContentAction()
     {
-        $data = ['content' => 'some about data'];
-        $view = $this->view($data, Response::HTTP_OK);
-
-        return $this->handleView($view);
+        return $this->render('/client.html.twig', [
+            'data' => 'some twig data',
+        ]);
     }
 }

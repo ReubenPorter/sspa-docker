@@ -10,4 +10,4 @@ fos_rest:
         rules:
             - { path: '^/api', priorities: ['json'], fallback_format: ~, prefer_extension: true }
             - { path: '^/admin', priorities: ['html'], fallback_format: ~, prefer_extension: true }
-            - { path: '^/', priorities: ['json', '*/*'], fallback_format: json, prefer_extension: true }
+            - { path: '^/', priorities: ['json', 'html', '*/*'], fallback_format: json, prefer_extension: true }
